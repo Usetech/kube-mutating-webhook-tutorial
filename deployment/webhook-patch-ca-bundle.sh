@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOT=$(cd $(dirname $0)/../../; pwd)
-KUBECTL=${KUBECTL_PATH:=$(which kubectl)}
+KUBECTL=${KUBECTL:=$(which kubectl)}
 
 set -o errexit
 set -o nounset

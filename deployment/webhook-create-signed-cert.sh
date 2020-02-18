@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KUBECTL=${KUBECTL_PATH:=$(which kubectl)}
+KUBECTL=${KUBECTL:=$(which kubectl)}
 
 set -e
 
