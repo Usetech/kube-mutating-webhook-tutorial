@@ -81,11 +81,14 @@ kube-system   Active    18h
 3. Deploy an app in Kubernetes cluster, take `sleep` app as an example
 ```
 [root@mstnode ~]# cat <<EOF | kubectl create -f -
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sleep
 spec:
+  selector:
+    matchLabels:
+      app: sleep
   replicas: 1
   template:
     metadata:
